@@ -8,6 +8,7 @@ package resources;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 
 /**
  *
@@ -50,6 +51,36 @@ public class Database {
     private static int id = 0;
     private static ArrayList<CatalogCard> active = new ArrayList<CatalogCard>();
     private static ArrayList<CatalogCard> archive = new ArrayList<CatalogCard>();
+    
+    public static boolean isInActiveWhereIdIs(int id){
+        int i=0;
+        for(; i < active.size(); i++){
+            if(active.get(i).getCardId() == id){
+                break;
+            }
+        }
+        if(i != active.size()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public static boolean isInActive(CatalogCard card){
+        if(active.contains(card)){
+            return true;
+        }else{
+            return false;    
+        }
+    }
+    
+    public static boolean isInArchive(CatalogCard card){
+        if(archive.contains(card)){
+            return true;
+        }else{
+            return false;    
+        }
+    }
     
     public static int assignId(){
         return id++;
@@ -139,19 +170,19 @@ public class Database {
         return Database.archive;
     }
     
-    public static boolean editActiveCardWhereIdIs(CatalogCard newCard){
-        int i=0;
-        for(; i < active.size(); i++){
-            if(active.get(i).getCardId() == newCard.getCardId()){
-                break;
-            }
-        }
-        if(i != active.size()){
-            active.set(id, newCard);
-            return true;
-        }else{
-            return false;
-        }
-    }
+//    public static boolean editActiveCardWhereIdIs(int id, String title, String author, String year, Date updatedon, String updater){
+//        int i=0;
+//        for(; i < active.size(); i++){
+//            if(active.get(i).getCardId() == id){
+//                break;
+//            }
+//        }
+//        if(i != active.size()){
+////            active.set(id, element);
+//            return true;
+//        }else{
+//            return false;
+//        }
+//    }
     
 }

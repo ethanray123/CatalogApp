@@ -5,14 +5,18 @@
  */
 package catalogapp;
 
+import java.util.Date;
+import resources.CatalogCard;
+import resources.Database;
+
 /**
  *
  * @author My PC
  */
 public class EditCatalogCard extends javax.swing.JFrame {
-
+    public static int editId = -1;
     /**
-     * Creates new form EditCatalogCard
+     * Creates new form AddCatalogCard
      */
     public EditCatalogCard() {
         initComponents();
@@ -27,21 +31,261 @@ public class EditCatalogCard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        titleField = new javax.swing.JTextField();
+        authorField = new javax.swing.JTextField();
+        yearField = new javax.swing.JTextField();
+        backBtn = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        welcomeUserLabel = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        alert = new javax.swing.JLabel();
+        editCatalogCardBtn = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        idField = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
+        searchCatalogCardBtn = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 80, 80));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Book Title");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 39, -1, -1));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Book Author");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 100, -1, -1));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Year Published");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 158, -1, -1));
+
+        titleField.setBackground(new java.awt.Color(0, 80, 80));
+        titleField.setForeground(new java.awt.Color(255, 255, 255));
+        titleField.setBorder(null);
+        titleField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                titleFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(titleField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 66, 625, -1));
+
+        authorField.setBackground(new java.awt.Color(0, 80, 80));
+        authorField.setForeground(new java.awt.Color(255, 255, 255));
+        authorField.setBorder(null);
+        authorField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                authorFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(authorField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 129, 625, -1));
+
+        yearField.setBackground(new java.awt.Color(0, 80, 80));
+        yearField.setForeground(new java.awt.Color(255, 255, 255));
+        yearField.setBorder(null);
+        yearField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yearFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(yearField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 187, 625, -1));
+
+        backBtn.setBackground(new java.awt.Color(0, 51, 51));
+        backBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Go Back");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout backBtnLayout = new javax.swing.GroupLayout(backBtn);
+        backBtn.setLayout(backBtnLayout);
+        backBtnLayout.setHorizontalGroup(
+            backBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backBtnLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel4)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        backBtnLayout.setVerticalGroup(
+            backBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, 120, -1));
+
+        welcomeUserLabel.setForeground(new java.awt.Color(255, 255, 255));
+        welcomeUserLabel.setText("Hello, User02!");
+        jPanel1.add(welcomeUserLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 36, 150, 23));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 83, 625, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 147, 625, 10));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 207, 625, 10));
+
+        alert.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        alert.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(alert, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 540, 83));
+
+        editCatalogCardBtn.setBackground(new java.awt.Color(0, 51, 51));
+        editCatalogCardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editCatalogCardBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Edit Catalog Card");
+
+        javax.swing.GroupLayout editCatalogCardBtnLayout = new javax.swing.GroupLayout(editCatalogCardBtn);
+        editCatalogCardBtn.setLayout(editCatalogCardBtnLayout);
+        editCatalogCardBtnLayout.setHorizontalGroup(
+            editCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editCatalogCardBtnLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel5)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        editCatalogCardBtnLayout.setVerticalGroup(
+            editCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editCatalogCardBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(editCatalogCardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Enter an Id of a Card");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+
+        idField.setBackground(new java.awt.Color(0, 80, 80));
+        idField.setForeground(new java.awt.Color(255, 255, 255));
+        idField.setBorder(null);
+        idField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 150, -1));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 150, 10));
+
+        searchCatalogCardBtn.setBackground(new java.awt.Color(0, 51, 51));
+        searchCatalogCardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchCatalogCardBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Search for Card");
+
+        javax.swing.GroupLayout searchCatalogCardBtnLayout = new javax.swing.GroupLayout(searchCatalogCardBtn);
+        searchCatalogCardBtn.setLayout(searchCatalogCardBtnLayout);
+        searchCatalogCardBtnLayout.setHorizontalGroup(
+            searchCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchCatalogCardBtnLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel7)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        searchCatalogCardBtnLayout.setVerticalGroup(
+            searchCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchCatalogCardBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(searchCatalogCardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void titleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_titleFieldActionPerformed
+
+    private void yearFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yearFieldActionPerformed
+
+    private void authorFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authorFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_authorFieldActionPerformed
+
+    private void backBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnMouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backBtnMouseClicked
+
+    private void editCatalogCardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editCatalogCardBtnMouseClicked
+        String title = titleField.getText();
+        String author = authorField.getText();
+        int year = Integer.parseInt(yearField.getText());
+        Date updated = new Date();
+        
+        CatalogCard newCard = Database.getFromActiveCardsWhereIdIs(editId);
+        newCard.setBookTitle(title);
+        newCard.setBookAuthor(author);
+        newCard.setYearPublished(year);
+        newCard.setDateUpdated(updated);
+        newCard.setUpdatedBy("user02");
+        
+//        if(Database.editActiveCardWhereIdIs(editId, title, author, year, updated)){
+        alert.setText("Card has been updated");
+//        }else{
+//            alert.setText("Error.. Card was not updated");
+//        }
+        
+    }//GEN-LAST:event_editCatalogCardBtnMouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idFieldActionPerformed
+
+    private void searchCatalogCardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchCatalogCardBtnMouseClicked
+        editId = Integer.parseInt(idField.getText());
+        if(Database.isInActiveWhereIdIs(editId)){
+            CatalogCard card = Database.getFromActiveCardsWhereIdIs(editId);
+            titleField.setText(card.getBookTitle());
+            authorField.setText(card.getBookAuthor());
+            yearField.setText(Integer.toString(card.getYearPublished()));
+        }
+    }//GEN-LAST:event_searchCatalogCardBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -69,6 +313,9 @@ public class EditCatalogCard extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditCatalogCard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +326,26 @@ public class EditCatalogCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel alert;
+    private javax.swing.JTextField authorField;
+    private javax.swing.JPanel backBtn;
+    private javax.swing.JPanel editCatalogCardBtn;
+    private javax.swing.JTextField idField;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JPanel searchCatalogCardBtn;
+    private javax.swing.JTextField titleField;
+    private javax.swing.JLabel welcomeUserLabel;
+    private javax.swing.JTextField yearField;
     // End of variables declaration//GEN-END:variables
 }

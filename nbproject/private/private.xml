@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/student.CEACCS/Documents/NetBeansProjects/CatalogApp/src/catalogapp/AddCatalogCard.java</file>
-            <file>file:/C:/Users/student.CEACCS/Documents/NetBeansProjects/CatalogApp/src/catalogapp/CatalogApp.java</file>
-            <file>file:/C:/Users/student.CEACCS/Documents/NetBeansProjects/CatalogApp/src/resources/CatalogCard.java</file>
-            <file>file:/C:/Users/student.CEACCS/Documents/NetBeansProjects/CatalogApp/src/catalogapp/Menu.java</file>
-            <file>file:/C:/Users/student.CEACCS/Documents/NetBeansProjects/CatalogApp/src/resources/Database.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/catalogapp/CatalogApp.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/catalogapp/RemoveCatalogCard.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/catalogapp/ViewCatalogCard.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/catalogapp/AddCatalogCard.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/catalogapp/Menu.java</file>
+            <file>file:/C:/Users/Ethan%20Ray%20Mosqueda/Documents/NetBeansProjects/CatalogApp/src/resources/Database.java</file>
         </group>
     </open-files>
 </project-private>

@@ -35,175 +35,185 @@ public class AddCatalogCard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        addCatalogCardBtn = new javax.swing.JPanel();
+        titleField = new javax.swing.JTextField();
+        authorField = new javax.swing.JTextField();
+        yearField = new javax.swing.JTextField();
+        goBackBtn = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        welcomeUserLabel = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
+        alert = new javax.swing.JLabel();
+        addCatalogCardBtn1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 80, 80));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Book Title");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 39, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Book Author");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 100, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Year Published");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 158, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(0, 80, 80));
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        titleField.setBackground(new java.awt.Color(0, 80, 80));
+        titleField.setForeground(new java.awt.Color(255, 255, 255));
+        titleField.setBorder(null);
+        titleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                titleFieldActionPerformed(evt);
             }
         });
+        jPanel1.add(titleField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 66, 625, -1));
 
-        jTextField2.setBackground(new java.awt.Color(0, 80, 80));
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        authorField.setBackground(new java.awt.Color(0, 80, 80));
+        authorField.setForeground(new java.awt.Color(255, 255, 255));
+        authorField.setBorder(null);
+        authorField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                authorFieldActionPerformed(evt);
             }
         });
+        jPanel1.add(authorField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 129, 625, -1));
 
-        jTextField3.setBackground(new java.awt.Color(0, 80, 80));
-        jTextField3.setBorder(null);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        yearField.setBackground(new java.awt.Color(0, 80, 80));
+        yearField.setForeground(new java.awt.Color(255, 255, 255));
+        yearField.setBorder(null);
+        yearField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                yearFieldActionPerformed(evt);
             }
         });
+        jPanel1.add(yearField, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 187, 625, -1));
 
-        addCatalogCardBtn.setBackground(new java.awt.Color(0, 51, 51));
-        addCatalogCardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        goBackBtn.setBackground(new java.awt.Color(0, 51, 51));
+        goBackBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                addCatalogCardBtnMouseClicked(evt);
+                goBackBtnMouseClicked(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Add Catalog Card");
+        jLabel4.setText("Go Back");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout addCatalogCardBtnLayout = new javax.swing.GroupLayout(addCatalogCardBtn);
-        addCatalogCardBtn.setLayout(addCatalogCardBtnLayout);
-        addCatalogCardBtnLayout.setHorizontalGroup(
-            addCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addCatalogCardBtnLayout.createSequentialGroup()
+        javax.swing.GroupLayout goBackBtnLayout = new javax.swing.GroupLayout(goBackBtn);
+        goBackBtn.setLayout(goBackBtnLayout);
+        goBackBtnLayout.setHorizontalGroup(
+            goBackBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(goBackBtnLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel4)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
-        addCatalogCardBtnLayout.setVerticalGroup(
-            addCatalogCardBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addCatalogCardBtnLayout.createSequentialGroup()
+        goBackBtnLayout.setVerticalGroup(
+            goBackBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(goBackBtnLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.add(goBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, 120, -1));
+
+        welcomeUserLabel.setForeground(new java.awt.Color(255, 255, 255));
+        welcomeUserLabel.setText("Hello, User02!");
+        jPanel1.add(welcomeUserLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 36, 150, 23));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 83, 625, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 147, 625, 10));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 207, 625, 10));
+
+        alert.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        alert.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(alert, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 318, 660, 180));
+
+        addCatalogCardBtn1.setBackground(new java.awt.Color(0, 51, 51));
+        addCatalogCardBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addCatalogCardBtn1MouseClicked(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Hello, User02!");
+        jLabel5.setText("Add Catalog Card");
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("jLabel6");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator2)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addGap(73, 73, 73))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addGap(62, 62, 62)))
-                    .addComponent(addCatalogCardBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
+        javax.swing.GroupLayout addCatalogCardBtn1Layout = new javax.swing.GroupLayout(addCatalogCardBtn1);
+        addCatalogCardBtn1.setLayout(addCatalogCardBtn1Layout);
+        addCatalogCardBtn1Layout.setHorizontalGroup(
+            addCatalogCardBtn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCatalogCardBtn1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel5)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel2))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(addCatalogCardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+        addCatalogCardBtn1Layout.setVerticalGroup(
+            addCatalogCardBtn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCatalogCardBtn1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 340));
+        jPanel1.add(addCatalogCardBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void titleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_titleFieldActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void yearFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_yearFieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void authorFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authorFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_authorFieldActionPerformed
 
-    private void addCatalogCardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCatalogCardBtnMouseClicked
-        String title = "Java Programming for Dummies";
-        String author = "Ethan Ray Mosqueda";
-        int year = 2018;
+    private void goBackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goBackBtnMouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_goBackBtnMouseClicked
+
+    private void addCatalogCardBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCatalogCardBtn1MouseClicked
+        String title = titleField.getText();
+        String author = authorField.getText();
+        int year = Integer.parseInt(yearField.getText());
         Date added = new Date();
+        Date updated = added;
         CatalogCard cat = new CatalogCard(Database.assignId(), title, author,
             year, added, added);
         Database.addToActiveCards(cat);
-    }//GEN-LAST:event_addCatalogCardBtnMouseClicked
+        if(Database.isInActive(cat)){
+            alert.setText("Catalog has been added to the system");
+        }else{
+            alert.setText("Error.. The Catalog was not added");
+        }
+    }//GEN-LAST:event_addCatalogCardBtn1MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -241,19 +251,21 @@ public class AddCatalogCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel addCatalogCardBtn;
+    private javax.swing.JPanel addCatalogCardBtn1;
+    private javax.swing.JLabel alert;
+    private javax.swing.JTextField authorField;
+    private javax.swing.JPanel goBackBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField titleField;
+    private javax.swing.JLabel welcomeUserLabel;
+    private javax.swing.JTextField yearField;
     // End of variables declaration//GEN-END:variables
 }

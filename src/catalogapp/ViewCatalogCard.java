@@ -5,12 +5,22 @@
  */
 package catalogapp;
 
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import resources.CatalogCard;
+import resources.Database;
 /**
  *
  * @author My PC
  */
 public class ViewCatalogCard extends javax.swing.JFrame {
-
+    
+    static DefaultTableModel table = new DefaultTableModel(8, 0);
     /**
      * Creates new form ViewCatalogCard
      */
@@ -27,21 +37,302 @@ public class ViewCatalogCard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        cardIdSortBtn = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        yearPublishedSortBtn = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        dateAddedSort = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        goBackBtn = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        cardTable = new javax.swing.JTable();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 80, 80));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cardIdSortBtn.setBackground(new java.awt.Color(0, 51, 51));
+        cardIdSortBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cardIdSortBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Card ID");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cardIdSortBtnLayout = new javax.swing.GroupLayout(cardIdSortBtn);
+        cardIdSortBtn.setLayout(cardIdSortBtnLayout);
+        cardIdSortBtnLayout.setHorizontalGroup(
+            cardIdSortBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardIdSortBtnLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(22, 22, 22))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        cardIdSortBtnLayout.setVerticalGroup(
+            cardIdSortBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardIdSortBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1.add(cardIdSortBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 110, -1));
+
+        yearPublishedSortBtn.setBackground(new java.awt.Color(0, 51, 51));
+        yearPublishedSortBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                yearPublishedSortBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Year Published ");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout yearPublishedSortBtnLayout = new javax.swing.GroupLayout(yearPublishedSortBtn);
+        yearPublishedSortBtn.setLayout(yearPublishedSortBtnLayout);
+        yearPublishedSortBtnLayout.setHorizontalGroup(
+            yearPublishedSortBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, yearPublishedSortBtnLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
+        );
+        yearPublishedSortBtnLayout.setVerticalGroup(
+            yearPublishedSortBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, yearPublishedSortBtnLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
+        );
+
+        jPanel1.add(yearPublishedSortBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 140, -1));
+
+        dateAddedSort.setBackground(new java.awt.Color(0, 51, 51));
+        dateAddedSort.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dateAddedSortMouseClicked(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Date Added");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dateAddedSortLayout = new javax.swing.GroupLayout(dateAddedSort);
+        dateAddedSort.setLayout(dateAddedSortLayout);
+        dateAddedSortLayout.setHorizontalGroup(
+            dateAddedSortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dateAddedSortLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dateAddedSortLayout.setVerticalGroup(
+            dateAddedSortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dateAddedSortLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(dateAddedSort, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 120, -1));
+
+        goBackBtn.setBackground(new java.awt.Color(0, 51, 51));
+        goBackBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goBackBtnMouseClicked(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Go Back");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout goBackBtnLayout = new javax.swing.GroupLayout(goBackBtn);
+        goBackBtn.setLayout(goBackBtnLayout);
+        goBackBtnLayout.setHorizontalGroup(
+            goBackBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(goBackBtnLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel5)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        goBackBtnLayout.setVerticalGroup(
+            goBackBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(goBackBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(goBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 480, 120, -1));
+
+        cardTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Card ID", "Book Title", "Book Author", "Year Published", "Date Added", "Cards", "Added By", "Updated By"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(cardTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 1110, 280));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void yearPublishedSortBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yearPublishedSortBtnMouseClicked
+        ArrayList<CatalogCard> ypSorted = Database.getActiveCardsYearPublishedSorted();
+
+        CatalogCard[] cardObj = ypSorted.toArray(new CatalogCard[ypSorted.size()]);
+        table = (DefaultTableModel) cardTable.getModel();
+        table.setRowCount(0);
+        cardTable = new JTable(table);
+        
+        for(CatalogCard cardObji : cardObj){
+            table.addRow(new Object[]{cardObji.getCardId(),
+            cardObji.getBookTitle(), cardObji.getBookAuthor(),
+            cardObji.getYearPublished(), cardObji.getDateAdded().toString(),
+            cardObji.getDateUpdated().toString(), cardObji.getAddedBy(),
+            cardObji.getUpdatedBy()});
+        }
+        
+//        DefaultTableModel tableModel = new DefaultTableModel(col, 0);
+//                                                    // The 0 argument is number rows.
+//        
+//        Object[] objs = {1, "Arsenal", 35, 11, 2, 2, 15, 30, 11, 19};
+//        String column[]={"Card ID","Book Title","Book Author","Year Published","Date Added","Date Updated","Added By","Updated By"};        
+//        String data[][] = {};
+//        DefaultTableModel listTableModel;
+//        listTableModel = new DefaultTableModel(data, column);
+//        DefaultTableModel model = (DefaultTableModel)cardTable.getModel();
+        
+//        for(int i=0; i < ypSorted.size(); i++){
+//            int id = ypSorted.get(i).getCardId();
+//            String title = ypSorted.get(i).getBookTitle();
+//            String author = ypSorted.get(i).getBookTitle();
+//            Date addedOn = ypSorted.get(i).getDateAdded();
+//            Date updatedOn = ypSorted.get(i).getDateUpdated();
+//            String addedBy = ypSorted.get(i).getAddedBy();
+//            String updatedBy = ypSorted.get(i).getUpdatedBy();
+//            Object[] objs = {title, author, addedOn, updatedOn, addedBy, updatedBy};
+//            listTableModel.addRow(objs);
+//            
+//        }
+//        
+//        JTable list = new JTable(listTableModel);
+//        list.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+//        list.setCellEditor(null);
+//        list.setBounds(0,10,300,300);
+//        JScrollPane sp = new JScrollPane(list);
+//        jPanel1.add(sp);
+//        sp.setSize(500, 500);
+//        sp.setVisible(true);
+//        jPanel2.add(sp);
+
+    }//GEN-LAST:event_yearPublishedSortBtnMouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void goBackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goBackBtnMouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_goBackBtnMouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void cardIdSortBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cardIdSortBtnMouseClicked
+        ArrayList<CatalogCard> idSorted = Database.getActiveCardsCardIdSorted();
+        
+        CatalogCard[] cardObj = idSorted.toArray(new CatalogCard[idSorted.size()]);
+        table = (DefaultTableModel) cardTable.getModel();
+        table.setRowCount(0);
+        cardTable = new JTable(table);
+        
+        for(CatalogCard cardObji : cardObj){
+            table.addRow(new Object[]{cardObji.getCardId(),
+            cardObji.getBookTitle(), cardObji.getBookAuthor(),
+            cardObji.getYearPublished(), cardObji.getDateAdded().toString(),
+            cardObji.getDateUpdated().toString(), cardObji.getAddedBy(),
+            cardObji.getUpdatedBy()});
+        }
+    }//GEN-LAST:event_cardIdSortBtnMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void dateAddedSortMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateAddedSortMouseClicked
+        ArrayList<CatalogCard> daSorted = Database.getActiveCardsDateAddedSorted();
+        
+        CatalogCard[] cardObj = daSorted.toArray(new CatalogCard[daSorted.size()]);
+        table = (DefaultTableModel) cardTable.getModel();
+        table.setRowCount(0);
+        cardTable = new JTable(table);
+        
+        for(CatalogCard cardObji : cardObj){
+            table.addRow(new Object[]{cardObji.getCardId(),
+            cardObji.getBookTitle(), cardObji.getBookAuthor(),
+            cardObji.getYearPublished(), cardObji.getDateAdded().toString(),
+            cardObji.getDateUpdated().toString(), cardObji.getAddedBy(),
+            cardObji.getUpdatedBy()});
+        }
+    }//GEN-LAST:event_dateAddedSortMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +370,16 @@ public class ViewCatalogCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel cardIdSortBtn;
+    private javax.swing.JTable cardTable;
+    private javax.swing.JPanel dateAddedSort;
+    private javax.swing.JPanel goBackBtn;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel yearPublishedSortBtn;
     // End of variables declaration//GEN-END:variables
 }
