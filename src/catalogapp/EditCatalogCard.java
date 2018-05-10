@@ -111,11 +111,6 @@ public class EditCatalogCard extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Go Back");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout backBtnLayout = new javax.swing.GroupLayout(backBtn);
         backBtn.setLayout(backBtnLayout);
@@ -266,12 +261,6 @@ public class EditCatalogCard extends javax.swing.JFrame {
 //        }
         
     }//GEN-LAST:event_editCatalogCardBtnMouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        Menu menu = new Menu();
-        menu.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jLabel4MouseClicked
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
         // TODO add your handling code here:

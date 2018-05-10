@@ -106,11 +106,6 @@ public class AddCatalogCard extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Go Back");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout goBackBtnLayout = new javax.swing.GroupLayout(goBackBtn);
         goBackBtn.setLayout(goBackBtnLayout);
@@ -210,10 +205,6 @@ public class AddCatalogCard extends javax.swing.JFrame {
             alert.setText("Error.. The Catalog was not added");
         }
     }//GEN-LAST:event_addCatalogCardBtn1MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        
-    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments

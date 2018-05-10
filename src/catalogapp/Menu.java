@@ -113,11 +113,6 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Edit Catalog Card");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout editCardBtnLayout = new javax.swing.GroupLayout(editCardBtn);
         editCardBtn.setLayout(editCardBtnLayout);
@@ -198,10 +193,6 @@ public class Menu extends javax.swing.JFrame {
         RemoveCard.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_removeCardBtnMouseClicked
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel3MouseClicked
 
     private void editCardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editCardBtnMouseClicked
         EditCatalogCard EditCard = new EditCatalogCard();

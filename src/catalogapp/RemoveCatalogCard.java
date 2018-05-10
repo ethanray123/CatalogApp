@@ -111,11 +111,6 @@ public class RemoveCatalogCard extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Go Back");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout goBackBtnLayout = new javax.swing.GroupLayout(goBackBtn);
         goBackBtn.setLayout(goBackBtnLayout);
@@ -153,10 +148,6 @@ public class RemoveCatalogCard extends javax.swing.JFrame {
             alert.setText("Error.. The Catalog was not removed");
         }
     }//GEN-LAST:event_removeCatalogCardBtnMouseClicked
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel7MouseClicked
 
     private void goBackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goBackBtnMouseClicked
         Menu menu = new Menu();
@@ -202,14 +193,10 @@ public class RemoveCatalogCard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel alert;
-    private javax.swing.JPanel backBtn;
-    private javax.swing.JPanel backBtn1;
     private javax.swing.JTextField cardIdField;
     private javax.swing.JPanel goBackBtn;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;

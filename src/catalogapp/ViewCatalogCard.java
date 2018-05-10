@@ -65,11 +65,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Card ID");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout cardIdSortBtnLayout = new javax.swing.GroupLayout(cardIdSortBtn);
         cardIdSortBtn.setLayout(cardIdSortBtnLayout);
@@ -100,11 +95,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Year Published ");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout yearPublishedSortBtnLayout = new javax.swing.GroupLayout(yearPublishedSortBtn);
         yearPublishedSortBtn.setLayout(yearPublishedSortBtnLayout);
@@ -135,11 +125,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Date Added");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout dateAddedSortLayout = new javax.swing.GroupLayout(dateAddedSort);
         dateAddedSort.setLayout(dateAddedSortLayout);
@@ -170,11 +155,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Go Back");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout goBackBtnLayout = new javax.swing.GroupLayout(goBackBtn);
         goBackBtn.setLayout(goBackBtnLayout);
@@ -227,10 +207,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        
-    }//GEN-LAST:event_jLabel4MouseClicked
-
     private void yearPublishedSortBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yearPublishedSortBtnMouseClicked
         ArrayList<CatalogCard> ypSorted = Database.getActiveCardsYearPublishedSorted();
 
@@ -282,19 +258,11 @@ public class ViewCatalogCard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_yearPublishedSortBtnMouseClicked
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
-
     private void goBackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goBackBtnMouseClicked
         Menu menu = new Menu();
         menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_goBackBtnMouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel6MouseClicked
 
     private void cardIdSortBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cardIdSortBtnMouseClicked
         ArrayList<CatalogCard> idSorted = Database.getActiveCardsCardIdSorted();
@@ -312,10 +280,6 @@ public class ViewCatalogCard extends javax.swing.JFrame {
             cardObji.getUpdatedBy()});
         }
     }//GEN-LAST:event_cardIdSortBtnMouseClicked
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel7MouseClicked
 
     private void dateAddedSortMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateAddedSortMouseClicked
         ArrayList<CatalogCard> daSorted = Database.getActiveCardsDateAddedSorted();
